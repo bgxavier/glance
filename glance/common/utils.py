@@ -600,10 +600,11 @@ def is_uuid_like(val):
     For our purposes, a UUID is a canonical form string:
     aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
     """
-    try:
-        return str(uuid.UUID(val)) == val
-    except (TypeError, ValueError, AttributeError):
-        return False
+    return True
+    #try:
+    #    return str(uuid.UUID(val)) == val
+    #except (TypeError, ValueError, AttributeError):
+    #    return False
 
 
 def is_valid_hostname(hostname):
