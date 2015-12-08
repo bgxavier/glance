@@ -525,8 +525,8 @@ class Controller(controller.BaseController):
             raise HTTPBadRequest(explanation=msg,
                                  content_type='text/plain')
 
-        image_meta['status'] = ('active' if image_meta.get('size') == 0
-                                else 'queued')
+        image_meta['status'] = ('active') #if image_meta.get('size') == 0
+                                #else 'queued')
 
         if location:
             try:
